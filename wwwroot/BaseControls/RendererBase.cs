@@ -48,8 +48,8 @@ namespace EPiServer.Commerce.Sample.BaseControls
         {
             bool hasCatalogEditingAccess = false;
             
-            if (PrincipalInfo.Current.Principal.IsInRole(CatalogSecurityDescriptor.CommerceAdminsRoleName) ||
-                PrincipalInfo.Current.Principal.IsInRole(CatalogSecurityDescriptor.CatalogManagersRoleName))
+            if (PrincipalInfo.Current.Principal.IsInRole(EPiServer.Commerce.Security.RoleNames.CommerceAdmins) ||
+                PrincipalInfo.Current.Principal.IsInRole(EPiServer.Commerce.Security.RoleNames.CatalogManagers))
             {
                 hasCatalogEditingAccess = true;
             }
